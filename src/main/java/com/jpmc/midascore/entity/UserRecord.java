@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 
 @Entity
 public class UserRecord {
-
+    //This class we can retrieve id, name, balance
     @Id
     @GeneratedValue()
     private long id;

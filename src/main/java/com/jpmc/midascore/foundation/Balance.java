@@ -3,6 +3,10 @@ package com.jpmc.midascore.foundation;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
+/*
+this class are just data holders
+ */
+
 public class Balance {
     private float amount;
 

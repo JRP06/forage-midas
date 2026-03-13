@@ -14,15 +14,24 @@ public class TransactionRecord {
     @ManyToOne
     private UserRecord recipient;
 
-    //JPA requires en empty protected construtor
+    private float amount;
+
+    //add incentive field so it gets saved to db and a getter
+    private float incentive;
+    public float getIncentive() {
+        return incentive;
+    }
+
+
+    //JPA requires en empty protected constructor
     protected TransactionRecord(){
     }
 
-    private float amount;
-    public TransactionRecord(UserRecord sender, UserRecord recipient, float amount){
+    public TransactionRecord(UserRecord sender, UserRecord recipient, float amount, float incentive){
         this.sender = sender;
         this.recipient = recipient;
         this.amount = amount;
+        this.incentive = incentive;
     }
 
     public UserRecord getSender(){
@@ -36,6 +45,4 @@ public class TransactionRecord {
     public float getAmount(){
         return amount;
     }
-
-
 }

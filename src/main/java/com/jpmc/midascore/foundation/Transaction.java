@@ -3,6 +3,7 @@ package com.jpmc.midascore.foundation;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
+//This class just holds data too.
 public class Transaction {
     private long senderId;
     private long recipientId;
@@ -17,6 +18,8 @@ public class Transaction {
         this.amount = amount;
     }
 
+    //setters and getters for senderId, recipientId, amount
+    //this allows to access encapsulated data fields.
     public long getSenderId() {
         return senderId;
     }
