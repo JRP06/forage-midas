@@ -3,7 +3,7 @@ package com.jpmc.midascore.foundation;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-//This class just holds data too.
+//This class just holds data
 public class Transaction {
     private long senderId;
     private long recipientId;

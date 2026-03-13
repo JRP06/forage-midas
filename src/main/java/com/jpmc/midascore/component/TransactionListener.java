@@ -45,9 +45,6 @@ public class TransactionListener {
         databaseConduit.save(recipient);
         databaseConduit.save(new TransactionRecord(sender, recipient, transaction.getAmount(), incentive.getAmount()));
 
-        if (sender.getName().equals("wilbur") || recipient.getName().equals("wilbur")) {
-            System.out.println("wilbur balance: " + (sender.getName().equals("wilbur") ? sender.getBalance() : recipient.getBalance()));
-        }
     }
 
 
